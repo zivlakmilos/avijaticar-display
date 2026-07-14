@@ -30,27 +30,18 @@ ApplicationWindow {
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
         Page {
-            Label {
-                text: "METAR & TAF"
-                anchors.centerIn: parent
-                font.pixelSize: 16
-                font.bold: true
+            MetarTaf {
+                anchors.fill: parent
             }
         }
         Page {
-            Label {
-                text: "Mass and Balance"
-                anchors.centerIn: parent
-                font.pixelSize: 16
-                font.bold: true
+            MassBalance {
+                anchors.fill: parent
             }
         }
         Page {
-            Label {
-                text: "Flight Plan"
-                anchors.centerIn: parent
-                font.pixelSize: 16
-                font.bold: true
+            FlightPlan {
+                anchors.fill: parent
             }
         }
         Page {

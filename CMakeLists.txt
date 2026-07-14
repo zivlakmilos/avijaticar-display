@@ -34,6 +34,9 @@ qt_add_qml_module(avijaticar
     URI avijaticarui
     QML_FILES
         Main.qml
+        MetarTaf.qml
+        MassBalance.qml
+        FlightPlan.qml
         Radar.qml
 )
 
