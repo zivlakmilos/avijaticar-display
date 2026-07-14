@@ -20,10 +20,21 @@ qt_add_executable(avijaticar
 set_target_properties(avijaticar PROPERTIES
    QT_ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
 
+set(PROJECT_QML_FILES
+    Main.qml
+)
+
+if (ANDROID)
+    list(APPEND PROJECT_QML_FILES
+        Radar.qml
+    )
+endif()
+
 qt_add_qml_module(avijaticar
-    URI avijaticar
+    URI avijaticarui
     QML_FILES
         Main.qml
+        Radar.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

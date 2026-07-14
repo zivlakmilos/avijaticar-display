@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls.Basic
-import QtWebView
 
 ApplicationWindow {
     id: window
@@ -55,9 +54,9 @@ ApplicationWindow {
             }
         }
         Page {
-            WebView {
+            Loader {
                 anchors.fill: parent
-                url: "https://www.ventusky.com/total-cloud-cover-map#p=45.27;20.25;7"
+                source: "Radar.qml"
             }
         }
     }
