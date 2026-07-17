@@ -27,6 +27,12 @@ ApplicationWindow {
     header: RowLayout {
         spacing: 0
 
+        Rectangle {
+            id: background
+            anchors.fill: parent
+            color: lightMode ? "#f5f5f5" : "#1a1a1a"
+        }
+
         TabBar {
             id: tabBar
             Layout.fillWidth: true
