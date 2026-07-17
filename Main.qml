@@ -53,9 +53,7 @@ ApplicationWindow {
             onClicked: window.toggleTheme()
 
             background: Rectangle {
-                color: themeToggle.pressed ? (window.lightMode ? "#d0d0d0" : "#404040") 
-                     : themeToggle.hovered ? (window.lightMode ? "#e0e0e0" : "#353535")
-                     : "transparent"
+                color: "transparent"
             }
 
             contentItem: Text {
