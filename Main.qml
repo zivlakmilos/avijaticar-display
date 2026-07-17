@@ -16,11 +16,11 @@ ApplicationWindow {
     property color reallyLight: "#e7e7e7"
     property color light: "#e0e0e0"
 
-    footer: TabBar {
+    header: TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
-        TabButton { text: qsTr("METAR TAF") }
-        TabButton { text: qsTr("Mass and Balance") }
+        TabButton { text: qsTr("METAR && TAF") }
+        TabButton { text: qsTr("Mass && Balance") }
         TabButton { text: qsTr("Flight Plan") }
         TabButton { text: qsTr("Weather") }
     }

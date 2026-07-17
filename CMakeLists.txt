@@ -38,6 +38,9 @@ qt_add_qml_module(avijaticar
         MassBalance.qml
         FlightPlan.qml
         Radar.qml
+
+        Card.qml
+        TextCard.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
