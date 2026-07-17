@@ -16,19 +16,13 @@ ApplicationWindow {
 
     function toggleTheme() {
         if (!userOverrideTheme) {
-            // First toggle: override system with opposite of current
             userOverrideTheme = true
             userLightMode = !lightMode
         } else {
-            // Already overriding: just toggle
             userLightMode = !userLightMode
         }
         lightMode = userLightMode
     }
-    property color reallyDark: "#1f1f1f"
-    property color dark: "#262626"
-    property color reallyLight: "#e7e7e7"
-    property color light: "#e0e0e0"
 
     header: RowLayout {
         spacing: 0
@@ -42,7 +36,7 @@ ApplicationWindow {
             TabButton { text: qsTr("Flight Plan") }
             TabButton { text: qsTr("Weather") }
         }
-        
+
         Button {
             id: themeToggle
             text: window.lightMode ? "\u2600" : "\u{1F319}"
