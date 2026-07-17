@@ -63,19 +63,19 @@ Item {
             anchors.margins: 16
             clip: true
         }
-      }
 
-      MouseArea {
-          id: mouseArea
-          anchors.fill: parent
-          enabled: root.clickable
-          hoverEnabled: root.clickable
-          cursorShape: root.clickable ? Qt.PointingHandCursor : Qt.ArrowCursor
+        MouseArea {
+            id: mouseArea
+            anchors.fill: parent
+            enabled: root.clickable
+            hoverEnabled: root.clickable
+            cursorShape: root.clickable ? Qt.PointingHandCursor : Qt.ArrowCursor
 
-          onClicked: {
-              if (root.clickable) {
-                  root.clicked()
-              }
-          }
-      }
+            onClicked: {
+                if (root.clickable) {
+                    root.clicked()
+                }
+            }
+        }
+    }
 }

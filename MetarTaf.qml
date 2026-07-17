@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls.Basic
 
-Item {
+Base {
   GridLayout {
       anchors.centerIn: parent
       columns: 2

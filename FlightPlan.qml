@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls.Basic
 
-Item {
+Base {
     Label {
         text: "Flight Plan"
         anchors.centerIn: parent

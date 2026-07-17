@@ -39,6 +39,7 @@ qt_add_qml_module(avijaticar
         FlightPlan.qml
         Radar.qml
 
+        Base.qml
         Card.qml
         TextCard.qml
 )
