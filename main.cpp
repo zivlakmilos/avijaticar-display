@@ -1,9 +1,12 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 
 #ifdef __ANDROID__
 #include <QtWebView>
 #endif // __ANDROID__
+
+#include "Weather.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +18,13 @@ int main(int argc, char *argv[])
 
   QGuiApplication app(argc, argv);
 
+  Weather *weather = new Weather(&app);
+  weather->getWeather();
+  weather->startAutoRefresh();
+
   QQmlApplicationEngine engine;
+  engine.rootContext()->setContextProperty("weather", weather);
+
   QObject::connect(
       &engine, &QQmlApplicationEngine::objectCreationFailed, &app, []() { QCoreApplication::exit(-1); },
       Qt::QueuedConnection);

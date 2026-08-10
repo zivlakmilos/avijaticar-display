@@ -5,7 +5,7 @@ project(avijaticar VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(QT_QML_GENERATE_QMLLS_INI ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick Multimedia)
+find_package(Qt6 REQUIRED COMPONENTS Quick Multimedia Network)
 
 if (ANDROID)
   find_package(Qt6 REQUIRED COMPONENTS WebView)
@@ -15,20 +15,12 @@ qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable(avijaticar
     main.cpp
+
+    Weather.cpp
 )
 
 set_target_properties(avijaticar PROPERTIES
    QT_ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-
-set(PROJECT_QML_FILES
-    Main.qml
-)
-
-if (ANDROID)
-    list(APPEND PROJECT_QML_FILES
-        Radar.qml
-    )
-endif()
 
 qt_add_qml_module(avijaticar
     URI avijaticarui
@@ -56,7 +48,7 @@ set_target_properties(avijaticar PROPERTIES
 )
 
 target_link_libraries(avijaticar
-    PRIVATE Qt6::Quick Qt6::Multimedia
+    PRIVATE Qt6::Quick Qt6::Multimedia Qt6::Network
 )
 
 if (ANDROID)
